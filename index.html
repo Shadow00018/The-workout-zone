@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second Floor — The Workout Zone Gym</title>
+<meta name="description" content="Second Floor, The Workout Zone Gym — Tilpat Road, Sehatpur, Faridabad. Train stronger. Move better. Become unstoppable.">
+<style>
+:root{
+  --bg:#070707;--panel:#101010;--panel2:#151515;--text:#f5f5f5;--muted:#a7a7a7;
+  --accent:#d7ff00;--accent2:#a9d000;--line:#242424;--max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,7,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:950;letter-spacing:-.06em;font-size:20px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;color:#ccc;font-size:14px;font-weight:700}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border-radius:8px;background:var(--accent);color:#070707;font-weight:900;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(215,255,0,.16)}
+.btn.dark{background:transparent;color:white;border:1px solid #3a3a3a}
+.btn.dark:hover{border-color:var(--accent);color:var(--accent)}
+.hero{min-height:780px;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:74px}
+.hero:before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 78% 35%,rgba(215,255,0,.16),transparent 25%),
+ linear-gradient(110deg,#070707 15%,rgba(7,7,7,.76) 52%,rgba(7,7,7,.42)),
+ linear-gradient(180deg,#080808,#0d0d0d);z-index:-2}
+.hero:after{content:"";position:absolute;right:-120px;bottom:-180px;width:650px;height:650px;border:100px solid rgba(215,255,0,.045);border-radius:50%;z-index:-1}
+.kicker{color:var(--accent);font-weight:950;letter-spacing:.16em;font-size:13px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(54px,8vw,108px);line-height:.88;letter-spacing:-.07em;max-width:850px;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{max-width:590px;color:#bdbdbd;font-size:18px;margin:26px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:650px;margin-top:62px;border-top:1px solid #2c2c2c;padding-top:20px}
+.stat strong{display:block;font-size:29px;letter-spacing:-.04em}.stat span{font-size:12px;color:#888;text-transform:uppercase;letter-spacing:.12em}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+.section-head h2{font-size:clamp(38px,5vw,64px);line-height:.95;letter-spacing:-.06em;text-transform:uppercase}
+.section-head p{max-width:480px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,#141414,#0d0d0d);border:1px solid var(--line);border-radius:16px;padding:30px;min-height:250px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#414141}
+.icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--accent);color:#050505;font-size:22px;font-weight:1000;margin-bottom:34px}
+.card h3{font-size:22px;margin-bottom:10px}.card p{color:#999;font-size:15px}
+.programs{background:#0b0b0b;border-block:1px solid var(--line)}
+.program{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid #222}
+.program:last-child{border-bottom:0}.program b{font-size:21px}.program span{color:#8f8f8f;font-size:14px;text-align:right}
+.cta{padding:0 0 105px}.cta-box{border-radius:22px;padding:65px;position:relative;overflow:hidden;background:var(--accent);color:#050505}
+.cta-box:after{content:"";position:absolute;width:330px;height:330px;border:55px solid rgba(0,0,0,.08);border-radius:50%;right:-70px;top:-130px}
+.cta-box h2{font-size:clamp(40px,6vw,78px);line-height:.9;letter-spacing:-.065em;max-width:800px;text-transform:uppercase}
+.cta-box p{margin:20px 0 25px;max-width:560px;color:#242900}
+.btn.black{background:#050505;color:#fff}.btn.black:hover{box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:var(--panel);border:1px solid var(--line);padding:30px;border-radius:16px}
+.contact-card small{color:#777;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.contact-card div{margin-top:10px;font-size:19px;font-weight:750}
+.map{height:100%;min-height:270px;border-radius:16px;border:1px solid var(--line);overflow:hidden;background:
+linear-gradient(rgba(215,255,0,.08) 1px,transparent 1px),
+linear-gradient(90deg,rgba(215,255,0,.08) 1px,transparent 1px),#101010;background-size:42px 42px;display:grid;place-items:center;text-align:center;padding:25px}
+.map .pin{font-size:45px;color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:13px}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+.mobile{display:none}
+@media(max-width:800px){
+ .nav-links{display:none}.mobile{display:inline-flex}.hero{min-height:690px}.stats{grid-template-columns:1fr 1fr;gap:20px}
+ .grid,.contact{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:18px}
+ .cta-box{padding:40px 28px}.program{align-items:flex-start;flex-direction:column}.program span{text-align:left}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+ <div class="container nav-inner">
+  <a class="logo" href="#">SECOND <span>FLOOR</span></a>
+  <div class="nav-links">
+   <a href="#about">About</a><a href="#training">Training</a><a href="#contact">Location</a>
+  </div>
+  <a class="btn mobile" href="#contact">Visit Us</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="container">
+  <div class="kicker">The Workout Zone Gym • Sehatpur</div>
+  <h1>Train hard.<br><em>Look stronger.</em><br>Feel unstoppable.</h1>
+  <p>A focused training space for people who are serious about getting stronger, fitter and more confident — right in Sehatpur.</p>
+  <div class="hero-actions">
+   <a class="btn" href="#contact">Get Directions ↗</a>
+   <a class="btn dark" href="#training">Explore Training</a>
+  </div>
+  <div class="stats">
+   <div class="stat"><strong>01</strong><span>Dedicated floor</span></div>
+   <div class="stat"><strong>∞</strong><span>Room to improve</span></div>
+   <div class="stat"><strong>100%</strong><span>Work ethic</span></div>
+  </div>
+ </div>
+</header>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head">
+   <h2>Built for<br>the grind.</h2>
+   <p>Whether your goal is fat loss, strength, muscle building or simply becoming more active, The Workout Zone is designed around consistent training.</p>
+  </div>
+  <div class="grid">
+   <article class="card"><div class="icon">↗</div><h3>Strength Training</h3><p>Build a stronger foundation with structured resistance training and progressive workouts.</p></article>
+   <article class="card"><div class="icon">⚡</div><h3>Fat Loss</h3><p>Combine training, movement and consistency to work toward a leaner, fitter body.</p></article>
+   <article class="card"><div class="icon">✦</div><h3>Fitness First</h3><p>Improve stamina, mobility and everyday confidence while making training a habit.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="programs" id="training">
+ <div class="container">
+  <div class="section-head">
+   <h2>Find your<br>workout.</h2>
+   <p>Choose the style of training that matches your current goal. Start where you are and keep progressing.</p>
+  </div>
+  <div>
+   <div class="program"><b>Strength & Muscle</b><span>Resistance • Progressive overload • Form</span></div>
+   <div class="program"><b>Weight Management</b><span>Strength • Conditioning • Consistency</span></div>
+   <div class="program"><b>General Fitness</b><span>Full-body movement • Stamina • Mobility</span></div>
+   <div class="program"><b>Beginner Training</b><span>Learn the basics • Build confidence • Progress safely</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="container">
+  <div class="cta-box">
+   <h2>Your next level starts here.</h2>
+   <p>Stop waiting for the perfect time. Step into the gym, put in the work and make progress one session at a time.</p>
+   <a class="btn black" href="#contact">Find the Gym</a>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="section-head">
+   <h2>Come train<br>with us.</h2>
+   <p>Visit Second Floor, The Workout Zone Gym in Sehatpur. Use the address below for navigation.</p>
+  </div>
+  <div class="contact">
+   <div class="contact-card">
+    <small>Address</small>
+    <div>SECOND FLOOR, THE WORKOUT ZONE GYM BUILDING,<br>Tilpat Rd, Surdas Colony,<br>Shiva Colony, Sehatpur</div>
+    <br>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=SECOND%20FLOOR%2C%20THE%20WORKOUT%20ZONE%20GYM%20BUILDING%2C%20Tilpat%20Rd%2C%20Surdas%20Colony%2C%20Shiva%20Colony%2C%20Sehatpur">Open in Google Maps ↗</a>
+   </div>
+   <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=SECOND%20FLOOR%2C%20THE%20WORKOUT%20ZONE%20GYM%20BUILDING%2C%20Tilpat%20Rd%2C%20Surdas%20Colony%2C%20Shiva%20Colony%2C%20Sehatpur">
+    <div><div class="pin">●</div><strong>THE WORKOUT ZONE</strong><br><span style="color:#888">Tap to open location</span></div>
+   </a>
+  </div>
+ </div>
+</section>
+
+<footer><div class="container"><span>© 2026 Second Floor — The Workout Zone Gym</span><span>Sehatpur • Faridabad</span></div></footer>
+</body>
+</html>
